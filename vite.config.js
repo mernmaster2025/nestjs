@@ -1,5 +1,7 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
 export default defineConfig({
     test: {
@@ -11,4 +13,4 @@ export default defineConfig({
             include: ["**/ts-vitest/src/mocks.ts"],
         }
     },
-})
+});
